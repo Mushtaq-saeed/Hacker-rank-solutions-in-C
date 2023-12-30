@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+void getMiddle(string x)
+{ 
+    int mid = x.length() / 2;
+    
+    if(x.length() % 2 == 0)
+    {
+        cout << x[mid - 1] << x[mid];
+    }
+    else
+        cout << x[mid]; 
+}
+
+int main()
+{
+    string word;
+    cout <<"Enter a word: " << endl;
+    cin >> word;
+    getMiddle(word);
+
+    return 0;  
+}
