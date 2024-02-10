@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     
-    vector<int> V;
+    vector<int> v;
     int size;
     cin >> size;
     
@@ -16,22 +16,22 @@ int main() {
     {
         int num;
         cin >> num;
-        V.push_back(num);
+        v.push_back(num);
     }
     
     int del;
     cin >> del;
-      V.erase(V.begin() + del);
+      v.erase(v.begin() + del - 1);
     
     int element1 , element2;
     cin >> element1 >> element2;
     
-    V.erase(V.begin() + element1 -1, V.begin() + element2 - 1);
+    v.erase(v.begin() + element1 -1, v.begin() + element2 - 1);
      
     
-     cout << V.size() << endl;
+     cout << v.size() << endl;
     
-    for(const int& i : V)
+    for(const int& i : v)
     {
         cout << i <<" ";
     }
