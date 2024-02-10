@@ -1,0 +1,40 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    
+    vector<int> V;
+    int size;
+    cin >> size;
+    
+    for(int i=0; i<size; i++)
+    {
+        int num;
+        cin >> num;
+        V.push_back(num);
+    }
+    
+    int del;
+    cin >> del;
+      V.erase(V.begin() + del);
+    
+    int element1 , element2;
+    cin >> element1 >> element2;
+    
+    V.erase(V.begin() + element1 -1, V.begin() + element2 - 1);
+     
+    
+     cout << V.size() << endl;
+    
+    for(const int& i : V)
+    {
+        cout << i <<" ";
+    }
+    
+    return 0;
+}
