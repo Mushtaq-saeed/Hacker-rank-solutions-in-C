@@ -1,0 +1,45 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int loop;
+    set<int> s;
+    cin >> loop;
+    while (loop--) {
+        int choice;
+        cin >> choice;
+        switch (choice) {
+            case 1: {
+                int element;
+                cin >> element;
+                s.insert(element);
+                break;
+            }
+            case 2: {
+                int item;
+                cin >> item;
+                auto it = s.find(item);
+                if (it != s.end())
+                    s.erase(it);
+                break;
+            }
+            case 3: {
+                int item_search;
+                cin >> item_search;
+                auto position = s.find(item_search);
+                if (position != s.end()) {
+                    cout << "Yes" << endl;
+                } else {
+                    cout << "No" << endl;
+                }
+                break;
+            }
+        }
+    }
+    return 0;
+}
